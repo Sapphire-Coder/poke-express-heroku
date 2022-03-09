@@ -57,6 +57,23 @@ app.delete('/pokemon/:id', (req, res) =>{
         res.redirect('/pokemon')
     })
 })
+// edit route
+app.get('/pokemon/:id/edit', (req, res) => {
+    Pokemon.findById(req.params.id, (err, foundPokemon) =>{
+        if(!err) {
+            res.render('Edit', { pokemon: foundPokemon })
+        }
+        else {
+            res.send({ msg: err.message })
+        }
+    })
+})
+// second portion of edit route
+app.put('/pokemon/:id', (req, res) =>{
+    Pokemon.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, foundPokemon) =>{
+        res.redirect('/pokemon')
+    })
+})
 
 
 mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true})
