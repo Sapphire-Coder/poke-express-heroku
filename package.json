@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "env": "^0.0.2",
+    "express": "^4.17.3",
+    "express-react-views": "^0.11.0",
+    "mongoose": "^6.2.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "poke-express-create",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sapphire-Coder/poke-express-create.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sapphire-Coder/poke-express-create/issues"
+  },
+  "homepage": "https://github.com/Sapphire-Coder/poke-express-create#readme"
+}
